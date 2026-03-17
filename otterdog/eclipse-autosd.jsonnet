@@ -16,6 +16,17 @@ orgs.newOrg('automotive.autosd', 'eclipse-autosd') {
       default_workflow_permissions: "write",
     },
   },
+  secrets+: [
+    orgs.newOrgSecret('SCP_KEY') {
+      value: "pass:bots/automotive.autosd/projects-storage.eclipse.org/id_ed25519",
+    },
+    orgs.newOrgSecret('SCP_PASSPHRASE') {
+      value: "pass:bots/automotive.autosd/projects-storage.eclipse.org/id_ed25519.passphrase",
+    },
+    orgs.newOrgSecret('SCP_USERNAME') {
+      value: "pass:bots/automotive.autosd/projects-storage.eclipse.org/username",
+    },
+  ],
   _repositories+:: [
     orgs.newRepo('eclipse-autosd') {
       allow_merge_commit: false,
