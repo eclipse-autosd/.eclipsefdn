@@ -9,7 +9,7 @@ orgs.newOrg('automotive.autosd', 'eclipse-autosd') {
     members_can_delete_repositories: false,
     name: "Eclipse Autosd",
     packages_containers_internal: false,
-    packages_containers_public: false,
+    packages_containers_public: true,
     web_commit_signoff_required: false,
     workflows+: {
       actions_can_approve_pull_request_reviews: false,
