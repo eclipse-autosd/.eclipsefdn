@@ -3,6 +3,8 @@ local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 orgs.newOrg('automotive.autosd', 'eclipse-autosd') {
   settings+: {
     description: "",
+    discussion_source_repository: "eclipse-autosd/eclipse-autosd",
+    has_discussions: true,
     members_can_change_project_visibility: false,
     members_can_change_repo_visibility: false,
     members_can_create_teams: false,
