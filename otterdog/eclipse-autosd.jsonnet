@@ -50,6 +50,28 @@ orgs.newOrg('automotive.autosd', 'eclipse-autosd') {
         default_workflow_permissions: "read",
       },
     },
+    orgs.newRepo('integration-service-to-signal') {
+      allow_merge_commit: false,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      secret_scanning: "disabled",
+      secret_scanning_push_protection: "disabled",
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "read",
+      },
+    },
+    orgs.newRepo('integration-score') {
+      allow_merge_commit: false,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      secret_scanning: "disabled",
+      secret_scanning_push_protection: "disabled",
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "read",
+      },
+    },
   ],
 } + {
   # snippet added due to 'https://github.com/eclipsefdn/otterdog-configs/blob/main/blueprints/add-dot-github-repo.yml'
